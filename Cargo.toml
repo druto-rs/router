@@ -1,0 +1,32 @@
+[package]
+name = "druto-router"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.95"
+description = "HTTP routing, request/response lifecycle, middleware onion runner, and execution context for Druto"
+repository = "https://github.com/druto-rs/router"
+readme = "README.md"
+keywords = ["router", "http", "druto", "routing", "middleware"]
+categories = ["web-programming::http-server"]
+
+[dependencies]
+bojha = { git = "https://github.com/Hitarashi/bojha.git", branch = "main", features = ["http"] }
+bytes = "1.12.2"
+chirkut = { git = "https://github.com/Hitarashi/chirkut.git", branch = "main" }
+dhap = { git = "https://github.com/Hitarashi/dhap.git", branch = "main" }
+futures-util = { version = "0.3.34", default-features = false, features = ["alloc"] }
+gopon = { git = "https://github.com/Hitarashi/gopon.git", branch = "main" }
+jachai = { git = "https://github.com/Hitarashi/jachai.git", branch = "main" }
+khonj = { git = "https://github.com/Hitarashi/khonj.git", branch = "main" }
+lagam = { git = "https://github.com/Hitarashi/lagam.git", branch = "main", features = ["http"] }
+percent-encoding = "2.3.2"
+poth = { git = "https://github.com/Hitarashi/poth.git", branch = "main" }
+regex = { version = "1.13.2", default-features = false, features = ["std", "perf"] }
+serde = { version = "1.0.229", default-features = false, features = ["derive", "alloc"] }
+serde_json = "1.0.154"
+session = { package = "druto-session", git = "https://github.com/druto-rs/session.git", branch = "main" }
+
+[dev-dependencies]
+proptest = "1.12.0"
+tokio = { version = "1.54.1", default-features = false, features = ["macros", "rt-multi-thread"] }
